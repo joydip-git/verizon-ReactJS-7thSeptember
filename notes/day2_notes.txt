@@ -11,10 +11,43 @@ works with virtual DOM, rather than directly manipulating actual DOM
 that makes React JS apps more faster compared to other libraries/frameworks
 huge commnunity support
 
+React packages:
+react, react-dom
+
 Component:  class (function constructor) or pure function (NOT a FC)
 a. contain data to be displayed in react element
 b. logic to be applied on the data to be displayed in react element
 c. create and return the react element
+
+1. ES6 --> older version of JS (ES5, ES3, ES2...) 
+@babel/preset-env: convert your modern JS down to ES5
+2. JSX --> JS --> older version 
+@babel/preset-react: for compiling JSX and other staff down to vanilla JS
+
+compiler and transpiler (transpilation: ES6/7/8/9 --> older version)
+Babel: @babel/core, @babel/preset-env, @babel/preset-react
+
+npm i @babel/core @babel/preset-env @babel/preset-react --save-dev
+
+.babelrc: configuration of babel
+
+loaders: transformers
+A webpack loader takes something as i/p and produces an o/p
+babel-loader: talking to babel.
+html-loader:
+css-loader:
+style-loader:
+
+html-webpack-plugin
+clean-webpack-plugin
+
+npm i webpack webpack-cli --save-dev
+
+npm i @babel/cli --save-dev
+npm i babel-loader html-loader css-loader style-loader --save-dev
+npm i html-webpack-plugin clean-webpack-plugin --save-dev
+
+npm i webpack-dev-server --save-dev
 
 
 
