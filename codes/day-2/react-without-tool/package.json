@@ -1,0 +1,23 @@
+{
+  "name": "react-without-tool",
+  "version": "1.0.0",
+  "description": "simple react app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joydip-git/verizon-ReactJS-7thSeptember.git"
+  },
+  "author": "joydip",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joydip-git/verizon-ReactJS-7thSeptember/issues"
+  },
+  "homepage": "https://github.com/joydip-git/verizon-ReactJS-7thSeptember#readme",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}

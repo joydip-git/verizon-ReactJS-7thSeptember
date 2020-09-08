@@ -1,0 +1,20 @@
+create first react app without any tool
+settings, packages etc.
+compile, run, deploy that simple app
+
+react concepts
+tool: create-react-app
+
+React JS:
+focus is on UI building
+works with virtual DOM, rather than directly manipulating actual DOM
+that makes React JS apps more faster compared to other libraries/frameworks
+huge commnunity support
+
+Component:  class (function constructor) or pure function (NOT a FC)
+a. contain data to be displayed in react element
+b. logic to be applied on the data to be displayed in react element
+c. create and return the react element
+
+
+

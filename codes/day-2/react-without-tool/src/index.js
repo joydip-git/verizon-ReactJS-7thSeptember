@@ -1,7 +1,8 @@
-const rootDesign = 'design1(data)+design2(data)+design3(data)';
-const divRoot = document.getElementById('root');
-console.log(divRoot)
-divRoot.innerHTML = rootDesign;
+import ReactDOM from 'react-dom'
+import Container from './components/Container'
 
-//SPA (single page application)
-//JS code + design (HTML)
+const rootDiv = document.getElementById('root');
+const completeDesign = Container();
+ReactDOM.render(completeDesign, rootDiv);
+
+
