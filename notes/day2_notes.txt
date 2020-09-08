@@ -2,7 +2,8 @@ create first react app without any tool
 settings, packages etc.
 compile, run, deploy that simple app
 
-react concepts
+react concepts:
+
 tool: create-react-app
 
 React JS:
@@ -48,6 +49,8 @@ npm i babel-loader html-loader css-loader style-loader --save-dev
 npm i html-webpack-plugin clean-webpack-plugin --save-dev
 
 npm i webpack-dev-server --save-dev
+
+npx create-react-app react-app
 
 
 
