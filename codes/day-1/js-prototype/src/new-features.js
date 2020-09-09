@@ -36,6 +36,7 @@ function counter() {
         this.count++;
         console.log(this.count);
     }
+    //increaseCounter = increaseCounter.bind(this);
     return increaseCounter;
 }
 var callback = new counter();
@@ -55,9 +56,9 @@ class Counter {
         this.counter++
         console.log(this.counter)
     }
-    
+
      //Counter.prototype.increaseCounter = function(){ this.counter++;}
-    
+
 }
 var counterObj = new Counter();
 counterObj.increaseCounter();//Counter.prototype.increaseCounter.apply(this);

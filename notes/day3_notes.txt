@@ -1,0 +1,21 @@
+1. props: to pass data from container component to nested component
+2. state: maintain to state of data in component (NOT used to pass data)
+
+style, applying bootstrap style
+using classes from CSS file
+
+lifecycle hooks
+
+RestFul service call using Axios/fetchAPI
+router
+
+react hooks
+
+forms and validation
+
+HOC, Render Props etc.
+
+state-uplifting:
+class C=> this.state ={product:{}}
+function A: props=>{product}
+function B: props=>{product}
