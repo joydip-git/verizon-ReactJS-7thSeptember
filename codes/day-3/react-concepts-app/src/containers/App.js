@@ -35,24 +35,28 @@ class App extends Component {
     // this.changeProductNameHandler = this.changeProductNameHandler.bind(this);
   }
 
-  changeProductNameHandler = (args) => {
-    let productName = args.target.value;
-    // console.log(productName)
-    //this.state.product.productName = productName;
-    //oldProduct-->
-    //this.state.product-->
-    // let oldProduct = Object.create({}, this.state.product);
-    let copyProduct = { ...this.state.product };
+  updateProductHandler = (value, property) => {
+    console.log('from parent')
+    // let productName = args.target.value;
+    // // console.log(productName)
+    // //this.state.product.productName = productName;
+    // //oldProduct-->
+    // //this.state.product-->
+    // // let oldProduct = Object.create({}, this.state.product);
+    // let copyProduct = { ...this.state.product };
 
-    console.log(copyProduct === this.state.product)
-    copyProduct.productName = productName;
+    // console.log(copyProduct === this.state.product)
+    // copyProduct.productName = productName;
+
+    let copyProduct = { ...this.state.product };
+    copyProduct[property] = value;
     this.setState(
       {
         product: copyProduct
       },
-      () => copyProduct = null
+      () => console.log(this.state.product)
     );
-    console.log(this.state.product)
+
   }
 
   render() {
@@ -62,7 +66,7 @@ class App extends Component {
         <button onClick={this.changeProductNameHandler}>Click</button>
         <ProductEdit
           product={this.state.product}
-          changeName={this.changeProductNameHandler} />
+          changeProduct={this.updateProductHandler} />
       </div>
     );
   }
