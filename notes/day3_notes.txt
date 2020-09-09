@@ -16,6 +16,13 @@ forms and validation
 HOC, Render Props etc.
 
 state-uplifting:
-class C=> this.state ={product:{}}
+class C=> this.state ={product:{}} => creates an object of class, render is invoked to get the react element
 function A: props=>{product}
 function B: props=>{product}
+
+<button>Click</button>
+
+
+
+
+
