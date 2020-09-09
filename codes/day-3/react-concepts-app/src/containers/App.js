@@ -58,12 +58,37 @@ class App extends Component {
     );
 
   }
-
+  changeXHandler = () => {
+    // let oldX = this.state.x;
+    // oldX = oldX + 1;
+    // this.setState({
+    //   x: oldX
+    // });
+    /**
+     * s={
+     * x:21
+     * product:copyProduct
+     * }
+     * 
+     * {
+     * product:copyProduct
+     * }
+     */
+    this.setState(
+      (prevState) => {
+        let newState = {
+          x: prevState.x + 1
+        }
+        return newState;
+      }, () => console.log(this.state.x));
+  }
   render() {
     console.log('rendered')
     return (
       <div>
-        <button onClick={this.changeProductNameHandler}>Click</button>
+        Value:<span>{this.state.x}</span>
+        <br />
+        <button onClick={this.changeXHandler}>Click</button>
         <ProductEdit
           product={this.state.product}
           changeProduct={this.updateProductHandler} />
