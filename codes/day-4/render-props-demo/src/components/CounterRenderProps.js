@@ -1,14 +1,29 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const testFn = () => {
-    return 20;
-}
-function CounterRenderProps(props) {
-    return (
-        <div>
-            {props.render('Joy', testFn)}
-        </div>
-    )
+export default class CounterRenderProps extends Component {
+    state = {
+        count: 0
+    }
+    increaseCounter = () => {
+        this.setState(ps => {
+            return {
+                count: ps.count + 1
+            }
+        });
+    }
+    decreaseCounter = () => {
+        this.setState(ps => {
+            return {
+                count: ps.count - 1
+            }
+        });
+    }
+    render() {
+        return (
+            <div>
+                {this.props.render(this.state.count, this.increaseCounter, this.decreaseCounter)}
+            </div>
+        )
+    }
 }
 
-export default CounterRenderProps

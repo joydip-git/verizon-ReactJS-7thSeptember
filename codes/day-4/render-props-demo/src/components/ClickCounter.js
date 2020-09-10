@@ -1,16 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function ClickCounter({ nameValue, invoke }) {
+function ClickCounter({ counterValue, increaseFunction, decreaseFunction }) {
     return (
         <div>
-            {nameValue}
-            <span>{invoke()}</span>
+            Click Counter Value:<span>{counterValue}</span>
+            <br />
+            <button onClick={increaseFunction}>Increase</button>
+            <br />
+            <button onClick={decreaseFunction}>Decrease</button>
         </div>
     )
 }
 ClickCounter.propTypes = {
-    nameValue: PropTypes.string.isRequired,
-    invoke: PropTypes.func.isRequired
+    counterValue: PropTypes.string.isRequired,
+    increaseFunction: PropTypes.func.isRequired,
+    decreaseFunction: PropTypes.func.isRequired
 }
-export default ClickCounter
+export default ClickCounter;
