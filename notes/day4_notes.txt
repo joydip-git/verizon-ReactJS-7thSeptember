@@ -37,3 +37,38 @@ destruction:
 
 error:
     componentDidCatch
+
+
+state in class component vs. state in functiontal component (via useState)
+a. state in class comp is alsways a JS object ({})
+   ctor(){ this.state={val:0, name:'joydip',cond:true, arr:[1,2,3,4], product:{}})
+   state in functional comp can be anything
+	const [val, setVal] = useState(0)
+	const [condition, setCondition] = useState(true)
+	useStatde('joydip')
+        useState([1,2,3,4])
+	useState({count:0, value:20})
+
+b. in class comp you can have only one state object
+   in functional comp you can have multiple state
+
+c. there are multiple versions of setState method in class component
+	setState({});
+	setState({}, ()=>{});
+	setState(ps=>{ return {}});
+	setState(ps=>{ return {}}, ()=>{});
+	setState((ps,props)=>{return {}});
+	setState((ps,props)=>{return {}}, ()=>{});
+   there are only two versions of setX method in functional component
+	setX({});
+	setX(ps=>{return {}});
+
+d. in order to access state in class component you use 'this' keyword (this.state)
+   in order to access state in functional component you DO NOT use 'this' keyword
+
+e. in class component newState is merged with old state, where the keys thar are not updated, remain as it is (not disturbance)
+   in functional component oldState is replaced by newstate, hence you will loose those keys which are not updated in the new state. in order to retain the old state keys, you should use object destructuring of oldstate and merge manually into new state and then update whichever keys that you want of the old state
+   
+
+
+
