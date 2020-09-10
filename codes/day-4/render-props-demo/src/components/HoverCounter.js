@@ -13,7 +13,7 @@ function HoverCounter({ counterValue, increaseFunction, decreaseFunction }) {
     )
 }
 HoverCounter.propTypes = {
-    counterValue: PropTypes.string.isRequired,
+    counterValue: PropTypes.number.isRequired,
     increaseFunction: PropTypes.func.isRequired,
     decreaseFunction: PropTypes.func.isRequired
 }
