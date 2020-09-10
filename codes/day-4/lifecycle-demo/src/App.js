@@ -1,34 +1,47 @@
 import React, { Component } from 'react';
 import './App.css';
 import Child from './Child';
+import AnotherChild from './AnotherChild';
 
 //restful HTTP call, connecting to underslying socket etc.: causes side-effect
 class App extends Component {
 
   state = {
     count: 0,
-    value: {
-      name: 'joy'
-    }
+    value: 0,
+    data: 0,
+    productId: 0,
+    show: true
+  }
+
+  changeData = () => {
+    this.setState(ps => {
+      return {
+        data: ps.data + 1,
+      }
+    })
   }
 
   increaseCount = () => {
-    let oldValue = { ...this.state.value };
     this.setState(ps => {
       return {
         count: ps.count + 1,
-        value: oldValue
       }
     })
   }
   increaseValue = () => {
-    let oldValue = { ...this.state.value };
-    oldValue.name = 'anil';
+    // let oldValue = { ...this.state.value };
+    // oldValue.name = 'anil';
+    // this.setState(ps => {
+    //   return {
+    //     value: oldValue
+    //   }
+    // });
     this.setState(ps => {
       return {
-        value: oldValue
+        value: ps.value + 1
       }
-    });
+    })
   }
   constructor(props) {
     super(props);
@@ -52,6 +65,7 @@ class App extends Component {
     console.log('App componentDidUpdate called')
   }
   render() {
+
     console.log('App rendered')
     return (
       <div className="App">
@@ -59,7 +73,17 @@ class App extends Component {
         <br />
         <button onClick={this.increaseCount}>Increase</button>
         <br />
-        <Child value={this.state.value} valueChange={this.increaseValue} />
+        <button onClick={() => this.setState(ps => { return { show: !ps.show } })}>
+          Show child????
+        </button>
+        <br />
+        {
+          this.state.show ? (<Child pid={this.state.productId} value={this.state.value} valueChange={this.increaseValue} />) : 'child gone'
+        }
+        <br />
+        <AnotherChild data={this.state.data} />
+        <br />
+        <button onClick={this.changeData}>ChangeData</button>
       </div>
     );
   }

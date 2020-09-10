@@ -33,5 +33,7 @@ Update:
 3. parent componentDidUpdate gets called
 
 destruction:
+    componentWillUnmount
 
 error:
+    componentDidCatch
