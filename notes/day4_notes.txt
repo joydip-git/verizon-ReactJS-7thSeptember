@@ -1,0 +1,37 @@
+'render' props
+
+1. convert CRP to a class component
+2. so that state can be used to store 'count' value
+3. create the function(s): increaseCount/decreaseCount
+4. call the props.render() and pass the state count data and the function(s) as arguments
+
+5. from App.js interact with CRP to pass the callback via render prop and receive data as well as function(s)
+6. produce CC by injecting the receieved data and function(s)
+
+7. let the CC be a functional component
+8. display the injceted count value and call the function to increase/decrease the count value from CC
+
+
+Mounting:
+1. parent ctor gets called
+2. parent getDerivedStateFromProps executed
+3. parent gets rendered
+	a. child ctor gets called
+	b. child getDerivedStateFromProps executed
+	c. child gets rendered
+	d. child gets mounted
+4. parent component gets mounted
+
+Update:
+1. parent getDerivedStateFromProps executed
+2. parent gets rendered
+	a. child getDerivedStateFromProps executed
+	b. child should component update gets called
+	c. child gets rendered
+	d. child getsnapshot called
+	e. child componentDidUpdate gets called
+3. parent componentDidUpdate gets called
+
+destruction:
+
+error:

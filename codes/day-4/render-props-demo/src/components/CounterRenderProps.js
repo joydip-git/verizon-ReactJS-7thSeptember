@@ -19,11 +19,9 @@ export default class CounterRenderProps extends Component {
         });
     }
     render() {
-        return (
-            <div>
-                {this.props.render(this.state.count, this.increaseCounter, this.decreaseCounter)}
-            </div>
-        )
+        return <>
+            {this.props.render(this.state.count, this.increaseCounter, this.decreaseCounter)}
+        </>
     }
 }
 

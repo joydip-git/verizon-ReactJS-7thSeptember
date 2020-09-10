@@ -8,14 +8,38 @@ function App() {
   return (
     <div className="App">
 
+      {/** sharing the state */}
+      {/* <CounterRenderProps
+        render=
+        {
+          (countValue, increaseFn, decreaseFn) =>
+            <>
+              <ClickCounter counterValue={countValue} increaseFunction={increaseFn} decreaseFunction={decreaseFn} />
+              <br/>
+              <br/>
+              <HoverCounter counterValue={countValue} increaseFunction={increaseFn} decreaseFunction={decreaseFn} />
+            </>
+        }
+      /> */}
+      {/** not sharing the state */}
       <CounterRenderProps
-        render={(countValue, increaseFn, decreaseFn) =>
-          <ClickCounter counterValue={countValue} increaseFunction={increaseFn} decreaseFunction={decreaseFn} />} />
+        render=
+        {
+          (countValue, increaseFn, decreaseFn) =>
+
+            <ClickCounter counterValue={countValue} increaseFunction={increaseFn} decreaseFunction={decreaseFn} />
+        }
+      />
       <br /><br />
       <CounterRenderProps
-        render={(countValue, increaseFn, decreaseFn) =>
-          <HoverCounter counterValue={countValue} increaseFunction={increaseFn} decreaseFunction={decreaseFn} />} />
-    </div>
+        render=
+        {
+          (countValue, increaseFn, decreaseFn) =>
+
+            <HoverCounter counterValue={countValue} increaseFunction={increaseFn} decreaseFunction={decreaseFn} />
+        }
+      />
+    </div >
   );
 }
 
