@@ -35,14 +35,17 @@ export class InternalChild extends Component {
         </>;
     }
 }
-export function InternalElementRefFunction() {
-    const elementRef = React.createRef();
+
+const InternalElementRefFunction = React.forwardRef((props, ref) => {
+    //const elementRef = React.createRef();
     const saySomething = () => {
 
     }
     return (
         <div>
-            <input type='text' ref={this.elementRef} />
+            {/* <input type='text' ref={elementRef} /> */}
+            <input type='text' ref={ref} />
         </div>
     )
 }
+)

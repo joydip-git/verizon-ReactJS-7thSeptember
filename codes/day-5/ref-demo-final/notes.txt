@@ -1,0 +1,6 @@
+ref:
+within a component itself, to interact with the react element, we use 'ref object'
+also, to access the child component from parent component we can use 'ref object'
+NOTE: both child and parent should be class component, or at least the child component should be a class component
+what if the child component is a functional component????
+use 'ref forwarding' mechanism
